@@ -55,7 +55,7 @@ app.post('/contacto', [
       // Detalles del correo
       let correoOptions = {
         from: email,
-        to: 'yoelruano848@gmail.com', // Cambia esto por la dirección a la que quieres enviar el correo
+        to: process.env.TRANSPORTER_RECEPTOR,
         subject: asunto,
         html: `
           <h1>${nombre}</h1>
@@ -77,7 +77,7 @@ app.post('/contacto', [
 });
 
 // Puerto en el que escucha el servidor
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.TRANSPORTER_PORT;
 app.listen(PORT, () => {
   console.log(`Servidor backend en ejecución en http://localhost:${PORT}`);
 });
