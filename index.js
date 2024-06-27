@@ -55,7 +55,7 @@ app.post('/contacto', [
       // Detalles del correo
       let correoOptions = {
         from: email,
-        to: 'yoelruano848@gmail.com', // Cambia esto por la dirección a la que quieres enviar el correo
+        to: 'tu_correo_receptor@gmail.com', // Cambia esto por la dirección a la que quieres enviar el correo
         subject: asunto,
         html: `
           <h1>${nombre}</h1>
